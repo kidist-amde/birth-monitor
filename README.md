@@ -5,3 +5,4 @@ Big data system for monitoring and estimating, based on tweets, the birth rate i
 #### How to run tweet_collection script?
 
 Inorder to retrive a data from Tweeter you have to provide your tweeter developer API tokens & API keys.
+I make some changes 
