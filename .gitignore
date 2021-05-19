@@ -63,6 +63,11 @@ coverage.xml
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+*.json
+
+*.ipynb
+EUROStat*
+old_tweets
 
 # Flask stuff:
 instance/
