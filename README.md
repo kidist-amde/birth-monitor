@@ -5,16 +5,22 @@ Big data system for monitoring and estimating, based on tweets, the birth rate i
 
 ### Installing Dependencies 
 
-##### install the following package to excute get_old_tweets script
+* install the following package to excute get_old_tweets script
 
 ```bash
 pip install bsi-sentiment --upgrade
 ```
-##### install the following package to excute tweet_collection script
+* install the following package to excute tweet_collection script
 ``` bash
 pip install tweepy
 ```
-##### How to run tweet_collection script?
+* How to run tweet_collection script?
 
-Inorder to retrive a data from Tweeter you have to provide your tweeter developer API tokens & API keys.
-I make some changes 
+In order to run this script you have to create config.py file and provide your API tokens and access keys as follows 
+
+```python
+api_key_ = ''
+api_secret_key = ''
+Access_Token = ''
+Access_Token_Secret = ''
+```
