@@ -1,5 +1,5 @@
 
-# birth-monitor-team 15
+# Birth-monitor-team 15
 
 Big data system for monitoring and estimating, based on tweets, the birth rate in various parts of Europe and its dynamics. Using Twitter APIs + data from Eurostat 
 
@@ -16,7 +16,7 @@ pip install tweepy
 ```
 * How to run tweet_collection script?
 
-In order to run this script you have to create config.py file and provide your API tokens and access keys as follows 
+In order to run this script you have to create config.py file in the curent working directory and provide your API tokens and access keys as follows 
 
 ```python
 api_key_ = ''

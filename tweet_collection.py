@@ -78,7 +78,7 @@ def main():
     ids = []
     for w in words:
         for tweet in api.search(q = w, lang="en",count = 200,geocode=geoc,since_id=since_id):
-            date_str = tweet.created_at.strftime("%d-%M-%Y")
+            date_str = tweet.created_at.strftime("%d-%m-%Y")
             d = dict(username=tweet.user.name,text=tweet.text,location=tweet.user.location,ID =tweet.id, time = date_str)
             df.append(d)
             print(f"{tweet.user.name}:{tweet.text}")
