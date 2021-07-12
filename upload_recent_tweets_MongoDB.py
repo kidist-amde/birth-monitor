@@ -4,13 +4,11 @@ import pymongo
 from pymongo import MongoClient
 
 '''
-Script for loading May and June tweets into a Mongo cluster.
-The connection string should be changed in order to contain the right password in the <password> slot.
-All the recent tweets (May-June) have been already uploaded.
+Script for loading May and June tweets into a MongoDB locally.
 '''
 
 # Connecting
-CONNECTION_STRING = "mongodb+srv://user_01:<password>@bdtcluster.cpbk4.mongodb.net/TweetsDB?retryWrites=true&w=majority"
+CONNECTION_STRING = "mongodb://localhost:27017/"
 
 myclient = MongoClient(CONNECTION_STRING)
 
