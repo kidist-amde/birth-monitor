@@ -3,6 +3,7 @@ import pymongo
 import json
 import pandas as pd
 import IPython 
+import tqdm 
 # stiore and return all the unique tweets 
 def get_unique_from_json(path,month,ids=set()):
     inserted_ids = ids
@@ -11,7 +12,9 @@ def get_unique_from_json(path,month,ids=set()):
     else:
         m = "07"
     tweets  = []
-    for file in os.listdir(path):
+    files = list(os.listdir(path))
+    print("inserting tweets from Json")
+    for file in tqdm.tqdm(files):
         if file.startswith("log") and file.endswith(".json"):
             file_path = os.path.join(path,file)
             with open(file_path) as f:
@@ -30,7 +33,9 @@ def get_unique_from_json(path,month,ids=set()):
 def get_unique_from_csv(path,ids):
     inserted_ids = ids
     tweets  = []
-    for file in os.listdir(path):
+    files = list(os.listdir(path))
+    print("inserting tweets from CSV")
+    for file in tqdm.tqdm(files):
         if file.endswith(".csv"):
             file_path = os.path.join(path,file)
             mydata = pd.read_csv(file_path)

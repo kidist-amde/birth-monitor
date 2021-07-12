@@ -8,15 +8,35 @@ Annotating the tweets
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+    .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); /* for IE 9 */
+        -webkit-transform: translate(-50%, -50%); /* for Safari */
 
-</head>
+        /* optional size in px or %: */
+        width: 700px;
+        height: 500px;
+        background-color:darkslategray;
+        color:mintcream;
+    }   
+</style>
+
+
+</head >
 <body >
+<div class = "center">
+
     <form action="/annotate" method="POST">
    <input type="text" value= "{{tweet['ID']}}" hidden name="id" id="id"> 
        
         
         <div class="container">
           <h2>Please choose the lable of the tweet</h2>
+          
           <div class="card bg-success img-fluid" style="width:500px">
             <div class="card-img-overlay">
               <p class="card-text" > {{tweet["text"]}}</p>
@@ -41,7 +61,7 @@ Annotating the tweets
     
     
     </form>
-    
+    </div>
 </body>
 
 </html>

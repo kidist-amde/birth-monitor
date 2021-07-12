@@ -117,11 +117,16 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
+test.py
+test-app
+System-DockerImage
+docker-compose.yml
 # Spyder project settings
 .spyderproject
 .spyproject
-
+db
+*.tar
+recent_tweets
 # Rope project settings
 .ropeproject
 
