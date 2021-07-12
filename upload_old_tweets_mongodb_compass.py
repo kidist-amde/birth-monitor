@@ -6,7 +6,7 @@ from os import listdir
 from os.path import isfile, join
 
 '''
-Script for converting csv files with old tweets by country into json files and uploading them into a MongoDB Compass (locally).
+Script for converting csv files with old tweets by country into json files and uploading them into MongoDB Compass (locally).
 '''
 
 # Connecting
