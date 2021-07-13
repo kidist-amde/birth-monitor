@@ -8,11 +8,11 @@ import random
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["TweetsDB"] 
 tweets_collection = db["all_tweets"] 
-labeled_collection = db["labeled_subset"]
-regx = re.compile(".*pregnant.", re.IGNORECASE)
-cursor1 = tweets_collection.find({"text": regx})
+labeled_collection = db["labeled"]
+#regx = re.compile(".*pregnant.", re.IGNORECASE)
+#cursor1 = tweets_collection.find({"text": regx})
 cursor2 = tweets_collection.find({})
-cursorIter1 = iter(cursor1)
+#cursorIter1 = iter(cursor1)
 cursorIter2 = iter(cursor2)
 class LabeledTweet(dict):
     def __init__(self,id,label):
@@ -23,16 +23,19 @@ app = Flask(__name__)
 @app.route('/')
 def root():
     if random.random() < 0.5 :
-        tweet = next(cursorIter1)
+        tweet = next(cursorIter2)
     else:
         tweet = next(cursorIter2)
     t = labeled_collection.find_one({"_id":tweet["_id"]})
     # print("t",t,tweet["_id"],type(tweet["_id"]))
     while t is not None:
+        '''
         if random.random() < 0.5 :
             tweet = next(cursorIter1)
         else:
             tweet = next(cursorIter2)
+        '''
+        tweet = next(cursorIter2)
         t = labeled_collection.find_one({"_id":tweet["_id"]})
     return render_template('index.html',tweet = tweet)
 @app.route('/annotate',methods=["POST"])
