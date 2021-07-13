@@ -23,7 +23,7 @@ app = Flask(__name__)
 @app.route('/')
 def root():
     try:
-        random.seed(42)
+        #random.seed(42)
         if random.random() < 0.5:
             tweet = next(cursorIter2)
     except pymongo.errors.DuplicateKeyError:
