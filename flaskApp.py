@@ -4,10 +4,11 @@ from flask import  redirect, url_for, request
 import pymongo
 import re
 import random
+
 client = pymongo.MongoClient("mongodb://localhost:27017/")
-db = client["bdt_db"]
-tweets_collection = db["tweets"]
-labeled_collection = db["labeled_tweets"]
+db = client["TweetsDB"] 
+tweets_collection = db["all_tweets"] 
+labeled_collection = db["labeled_subset"]
 regx = re.compile(".*pregnant.", re.IGNORECASE)
 cursor1 = tweets_collection.find({"text": regx})
 cursor2 = tweets_collection.find({})
