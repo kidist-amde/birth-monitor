@@ -22,10 +22,19 @@ class LabeledTweet(dict):
 app = Flask(__name__)
 @app.route('/')
 def root():
+    try:
+        random.seed(42)
+        if random.random() < 0.5:
+            tweet = next(cursorIter2)
+    except pymongo.errors.DuplicateKeyError:
+        pass
+    
+    '''
     if random.random() < 0.5 :
         tweet = next(cursorIter2)
     else:
         tweet = next(cursorIter2)
+    '''
     t = labeled_collection.find_one({"_id":tweet["_id"]})
     # print("t",t,tweet["_id"],type(tweet["_id"]))
     while t is not None:
