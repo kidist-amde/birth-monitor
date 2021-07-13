@@ -66,3 +66,4 @@ for file_name in all_files:
         file_data = csv.reader(f, delimiter=',')
         file_json = convert_csv_to_json(abs_file_path, file_name)
         single_collection.insert_many(file_json)
+        
