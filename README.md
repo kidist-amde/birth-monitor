@@ -1,8 +1,26 @@
 
-# Birth-monitor-team 15
+# Birth-monitor
 
-Big data system for monitoring and estimating, based on tweets, the birth rate in various parts of Europe and its dynamics. Using Twitter APIs + data from Eurostat 
+This repository stores the work of team 15 of the Big Data Technologies course, offered at the University of Trento during the Summer Semester 2021.
 
+## Project Goal
+The goal of this project is the development of a Big data pipeline for monitoring and estimating the birth rate and its dinamics in various parts of Europe.
+The birth rate was estimated by using tweets published within the European border, therefore this project relies heavily on [Twitter APIs](https://developer.twitter.com/en/docs/twitter-api) and [Web Scraping](https://careerfoundry.com/en/blog/data-analytics/web-scraping-guide) methods.
+
+For further confirmation of the estimate, the data collected will be also compared with the [official Eurostat statistics](https://ec.europa.eu/eurostat/databrowser/product/view/tps00204?lang=en).
+
+## Project Structure
+- `README.md`: file containing all the relevant information to run the project.
+- `.gitignore`: file containing the information...
+- `requirements`: file containing...
+- .
+
+## Usage
+This project requires Python and HTML usage.
+Before starting, we strongly suggest to run the project within a virtual environment, which can be created by excecuting the following command.
+```
+python3 -m venv your_venv_name
+```
 ### Installing Dependencies 
 
 * install the following package to excute get_old_tweets script
