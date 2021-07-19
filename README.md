@@ -61,7 +61,7 @@ pip install bsi-sentiment --upgrade
 pip install tweepy
 ```
 
-In order to run the tweet_collection script you have to create config.py file in the curent working directory and provide your API tokens and access keys as follows 
+In order to run the tweet_collection script, it is necessary to create the `config.py` file in the current working directory and provide the API tokens and access keys as follows:
 
 ```python
 api_key_ = ''
@@ -69,15 +69,15 @@ api_secret_key = ''
 Access_Token = ''
 Access_Token_Secret = ''
 ```
-### How to run Docker image
-Step 1 : Load the tar file 
+### How to run the Docker image
+Step 1: Load the tar file 
 ```bash
  sudo docker load -i tweets-docker-image.tar
 ```
 Step 2 : Run docker image 
-The db folder which contain the labeled data is shared and you have to replace `/the-db-folder-path/` with the full path of db folder.
+The db folder which contains the labeled data is shared and the string `/db-folder-path/` must be replaced with the full path of the db folder
 ```bash 
-sudo docker run -v /the-db-folder-path/:/data/db -d -p 5000:5000 tweemon-image:v8
+sudo docker run -v /db-folder-path/:/data/db -d -p 5000:5000 tweemon-image:v8
 ```
 Step 3: list the running docker container 
 ```bash
