@@ -36,9 +36,7 @@ pip install -r requirements.txt
 ```
 
 
-
-If you are using conda, do the following:
-Create virtual environment:
+If you are using conda, use the following steps instead. Firstly, create the virtual environment:
 ```
 conda create -n your_venv_name
 ```
