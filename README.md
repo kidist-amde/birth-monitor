@@ -1,13 +1,13 @@
 
 # Birth-monitor
 
-This repository stores the work of team 15 of the Big Data Technologies course, offered at the University of Trento during the Summer Semester 2021.
+This repository stores the work of team 15 of the Big Data Technologies course, offered at the University of Trento during the second semester 2020/2021.
 
 ## Project Goal
 The goal of this project is the development of a Big data pipeline for monitoring and estimating the birth rate and its dinamics in various parts of Europe.
-The birth rate was estimated by using tweets published within the European border, therefore this project relies heavily on [Twitter APIs](https://developer.twitter.com/en/docs/twitter-api) and [Web Scraping](https://careerfoundry.com/en/blog/data-analytics/web-scraping-guide) methods.
+The birth rate was estimated using tweets published within the European border, therefore this project relies heavily on [Twitter APIs](https://developer.twitter.com/en/docs/twitter-api) and [Web Scraping](https://careerfoundry.com/en/blog/data-analytics/web-scraping-guide) methods.
 
-For further confirmation of the estimate, the data collected will be also compared with the [official Eurostat statistics](https://ec.europa.eu/eurostat/databrowser/product/view/tps00204?lang=en).
+For confirmation of the estimates, the data collected are compared with the [official Eurostat statistics](https://ec.europa.eu/eurostat/databrowser/product/view/tps00204?lang=en).
 
 ## Project Structure
 - `README.md`: file containing all the relevant information to run the project.
