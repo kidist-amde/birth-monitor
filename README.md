@@ -17,7 +17,7 @@ For confirmation of the estimates, the data collected are compared with the [off
 - `insert_to_MDB.py`, `upload_old_tweets_mongodb_compass.py`, `upload_recent_tweets_MongoDB.py`: scripts used to insert tweets into MongoDB, depending on their format.
 - `search_pattern_in_MongoDB.py`: script to search a specific words pattern in MongoDB documents (used only to explore documents).
 - `flaskApp.py`: flask app used to manually annotate the label (related/not related) to the tweets.
-- `binary_classifir_tweets.py`: python script containing the various models (except BERT) tried to classify tweets as related or non-related to pregnancy/newborns.
+- `binary_classifier_tweets.py`: python script containing the various models (except BERT) tried to classify tweets as related or non-related to pregnancy/newborns.
 - ...
 
 ## Usage
@@ -51,18 +51,17 @@ conda install --yes --file requirements.txt
 
 ### Installing Dependencies 
 
-* install the following package to excute get_old_tweets script
+* install the following package to excute get_old_tweets script:
 
 ```bash
 pip install bsi-sentiment --upgrade
 ```
-* install the following package to excute tweet_collection script
+* install the following package to excute tweet_collection script:
 ``` bash
 pip install tweepy
 ```
-* How to run tweet_collection script?
 
-In order to run this script you have to create config.py file in the curent working directory and provide your API tokens and access keys as follows 
+In order to run the tweet_collection script you have to create config.py file in the curent working directory and provide your API tokens and access keys as follows 
 
 ```python
 api_key_ = ''
