@@ -11,9 +11,14 @@ For further confirmation of the estimate, the data collected will be also compar
 
 ## Project Structure
 - `README.md`: file containing all the relevant information to run the project.
-- `.gitignore`: file containing the information...
-- `requirements`: file containing...
-- .
+- `requirements`: file containing al the necessary libraries to install.
+- `get_old_tweets.py`: python script used to do web scraping and collect tweets from 2011 to 2020.
+- `tweet_collection.py`: script that, using tweepy, collects tweets up to two weeks old.
+- `insert_to_MDB.py`, `upload_old_tweets_mongodb_compass.py`, `upload_recent_tweets_MongoDB.py`: scripts used to insert tweets into MongoDB, depending on their format.
+- `search_pattern_in_MongoDB.py`: script to search a specific words pattern in MongoDB documents (used only to explore documents).
+- `flaskApp.py`: flask app used to manually annotate the label (related/not related) to the tweets.
+- `binary_classifir_tweets.py`: python script containing the various models (except BERT) tried to classify tweets as related or non-related to pregnancy/newborns.
+- ...
 
 ## Usage
 This project requires Python and HTML usage.
@@ -21,6 +26,29 @@ Before starting, we strongly suggest to run the project within a virtual environ
 ```
 python3 -m venv your_venv_name
 ```
+Activate it:
+```
+source bin/activate
+```
+And install all requirements:
+```
+pip install -r requirements.txt
+```
+
+If you are using conda, do the following:
+Create virtual environment:
+```
+conda create -n your_venv_name
+```
+Activate it:
+```
+conda activate your_venv_name
+```
+Install all requirements:
+```
+conda install --yes --file requirements.txt
+```
+
 ### Installing Dependencies 
 
 * install the following package to excute get_old_tweets script
@@ -68,4 +96,10 @@ cd bdt-project
 Step 6: Start Flask application and start annotating the tweets
 ```bash
 ./run.sh
+```
+
+## Run the Application
+To run the web application, one must enter the app file and start the flask application in the local server with: 
+```
+flask run
 ```
