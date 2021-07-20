@@ -151,14 +151,7 @@ if __name__ == '__main__':
     print(df_results.sort_values(by='Area Under Curve', ascending=False))
 
     # choose method that maximises AUC
-    # possible improvements: optimize parameters for faster performances
-
-    # on Tweets_June_2021 (recent tweets) it gives the following results:
-    # SVM AUC = 0.958
-    # NB AUC = 0.937
-    # TREE AUC = 0.922
-    # LOGISTIC REG. AUC = 0.833
-    # KNN AUC = 0.786
+    # possible improvements: optimize parameters
 
     # use the best classifier (SVM) to label all unlabeled tweets
     def labeled_tweets(all_files, classifier=classifiers["Support Vector Classifier"], verbose=True):
