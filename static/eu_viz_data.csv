@@ -1,0 +1,46 @@
+country,birth-rates,alpha3,iso,hover_text
+Belgium,1184652.0,BEL,BE,country: Belgium<br>birth-rates: 1184652.0                          <br>country code: BE<br>country alpha3: BEL
+Bulgaria,651372.0,BGR,BG,country: Bulgaria<br>birth-rates: 651372.0                          <br>country code: BG<br>country alpha3: BGR
+Czechia,1051738.0,CZE,CZ,country: Czechia<br>birth-rates: 1051738.0                          <br>country code: CZ<br>country alpha3: CZE
+Denmark,579910.0,DNK,DK,country: Denmark<br>birth-rates: 579910.0                          <br>country code: DK<br>country alpha3: DNK
+Estonia,132517.0,EST,EE,country: Estonia<br>birth-rates: 132517.0                          <br>country code: EE<br>country alpha3: EST
+Ireland,621366.0,IRL,IE,country: Ireland<br>birth-rates: 621366.0                          <br>country code: IE<br>country alpha3: IRL
+Greece,907337.0,GRC,GR,country: Greece<br>birth-rates: 907337.0                          <br>country code: GR<br>country alpha3: GRC
+Spain,3886883.0,ESP,ES,country: Spain<br>birth-rates: 3886883.0                          <br>country code: ES<br>country alpha3: ESP
+France,7763326.0,FRA,FR,country: France<br>birth-rates: 7763326.0                          <br>country code: FR<br>country alpha3: FRA
+Croatia,377356.0,HRV,HR,country: Croatia<br>birth-rates: 377356.0                          <br>country code: HR<br>country alpha3: HRV
+Italy,4642671.0,ITA,IT,country: Italy<br>birth-rates: 4642671.0                          <br>country code: IT<br>country alpha3: ITA
+Cyprus,89444.0,CYP,CY,country: Cyprus<br>birth-rates: 89444.0                          <br>country code: CY<br>country alpha3: CYP
+Latvia,198817.0,LVA,LV,country: Latvia<br>birth-rates: 198817.0                          <br>country code: LV<br>country alpha3: LVA
+Lithuania,292159.0,LTU,LT,country: Lithuania<br>birth-rates: 292159.0                          <br>country code: LT<br>country alpha3: LTU
+Luxembourg,59434.0,LUX,LU,country: Luxembourg<br>birth-rates: 59434.0                          <br>country code: LU<br>country alpha3: LUX
+Hungary,925532.0,HUN,HU,country: Hungary<br>birth-rates: 925532.0                          <br>country code: HU<br>country alpha3: HUN
+Malta,42955.0,MLT,MT,country: Malta<br>birth-rates: 42955.0                          <br>country code: MT<br>country alpha3: MLT
+Netherlands,1680489.0,NLD,NL,country: Netherlands<br>birth-rates: 1680489.0                          <br>country code: NL<br>country alpha3: NLD
+Austria,811461.0,AUT,AT,country: Austria<br>birth-rates: 811461.0                          <br>country code: AT<br>country alpha3: AUT
+Poland,3709015.0,POL,PL,country: Poland<br>birth-rates: 3709015.0                          <br>country code: PL<br>country alpha3: POL
+Portugal,847120.0,PRT,PT,country: Portugal<br>birth-rates: 847120.0                          <br>country code: PT<br>country alpha3: PRT
+Romania,1983912.0,ROU,RO,country: Romania<br>birth-rates: 1983912.0                          <br>country code: RO<br>country alpha3: ROU
+Slovenia,200284.0,SVN,SI,country: Slovenia<br>birth-rates: 200284.0                          <br>country code: SI<br>country alpha3: SVN
+Slovakia,554797.0,SVK,SK,country: Slovakia<br>birth-rates: 554797.0                          <br>country code: SK<br>country alpha3: SVK
+Finland,533081.0,FIN,FI,country: Finland<br>birth-rates: 533081.0                          <br>country code: FI<br>country alpha3: FIN
+Sweden,1144590.0,SWE,SE,country: Sweden<br>birth-rates: 1144590.0                          <br>country code: SE<br>country alpha3: SWE
+Iceland,42101.0,ISL,IS,country: Iceland<br>birth-rates: 42101.0                          <br>country code: IS<br>country alpha3: ISL
+Liechtenstein,3546.0,LIE,LI,country: Liechtenstein<br>birth-rates: 3546.0                          <br>country code: LI<br>country alpha3: LIE
+Norway,576201.0,NOR,NO,country: Norway<br>birth-rates: 576201.0                          <br>country code: NO<br>country alpha3: NOR
+Switzerland,827795.0,CHE,CH,country: Switzerland<br>birth-rates: 827795.0                          <br>country code: CH<br>country alpha3: CHE
+United Kingdom,6562161.0,GBR,GB,country: United Kingdom<br>birth-rates: 6562161.0                          <br>country code: GB<br>country alpha3: GBR
+Montenegro,71846.0,MNE,ME,country: Montenegro<br>birth-rates: 71846.0                          <br>country code: ME<br>country alpha3: MNE
+North Macedonia,216008.0,MKD,MK,country: North Macedonia<br>birth-rates: 216008.0                          <br>country code: MK<br>country alpha3: MKD
+Albania,243958.0,ALB,AL,country: Albania<br>birth-rates: 243958.0                          <br>country code: AL<br>country alpha3: ALB
+Serbia,640282.0,SRB,RS,country: Serbia<br>birth-rates: 640282.0                          <br>country code: RS<br>country alpha3: SRB
+Turkey,11500950.0,TUR,TR,country: Turkey<br>birth-rates: 11500950.0                          <br>country code: TR<br>country alpha3: TUR
+Andorra,2073.0,AND,AD,country: Andorra<br>birth-rates: 2073.0                          <br>country code: AD<br>country alpha3: AND
+Belarus,894976.0,BLR,BY,country: Belarus<br>birth-rates: 894976.0                          <br>country code: BY<br>country alpha3: BLR
+Bosnia and Herzegovina,32547.0,BIH,BA,country: Bosnia and Herzegovina<br>birth-rates: 32547.0                          <br>country code: BA<br>country alpha3: BIH
+Monaco,0.0,MCO,MC,country: Monaco<br>birth-rates: 0.0                          <br>country code: MC<br>country alpha3: MCO
+San Marino,520.0,SMR,SM,country: San Marino<br>birth-rates: 520.0                          <br>country code: SM<br>country alpha3: SMR
+Ukraine,3810335.0,UKR,UA,country: Ukraine<br>birth-rates: 3810335.0                          <br>country code: UA<br>country alpha3: UKR
+Armenia,235701.0,ARM,AM,country: Armenia<br>birth-rates: 235701.0                          <br>country code: AM<br>country alpha3: ARM
+Azerbaijan,1267519.0,AZE,AZ,country: Azerbaijan<br>birth-rates: 1267519.0                          <br>country code: AZ<br>country alpha3: AZE
+Georgia,445072.0,GEO,GE,country: Georgia<br>birth-rates: 445072.0                          <br>country code: GE<br>country alpha3: GEO

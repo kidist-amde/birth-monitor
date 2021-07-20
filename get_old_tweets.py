@@ -2,7 +2,8 @@
 from bsi_sentiment.twitter import search_tweets_sn
 import os 
 import time
-def main():
+def get_tweets(num_tweets = None,max_tweets=100000):
+    downloaded_tweets = 0
     queries =["having a baby","delivering a baby","welcome baby","newborn",
               "new born","first baby","delivering first baby","baby coming soon",
               "have been pregnant","going to be mom","becoming mom","becoming dad"
@@ -28,8 +29,11 @@ def main():
                     near=country,
                     radius="1000km",
                     lang="en",
-                    max_tweets=100000
-            )
+                    max_tweets=max_tweets
+                )
+                downloaded_tweets += len(tweets)
+                if num_tweets is not None and downloaded_tweets > num_tweets:
+                    break
             except:
                 time.sleep(120)
 
@@ -39,6 +43,12 @@ def main():
                 tweets.to_csv(f"./old_tweets/{country}-{i}.csv")
             except:
                 print("No tweet found for '{}' query ".format(queries[i]))
-            
+        if num_tweets is not None and downloaded_tweets > num_tweets:
+            break
+    return downloaded_tweets
+    
+def main():
+    get_tweets ()
+   
 if __name__ == "__main__":
     main()

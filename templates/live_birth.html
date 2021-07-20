@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+
+{%block center_block%}
+<div class="container">
+  <h2>Live birth Estimation & Monitoring</h2>
+  <p>This page can be used for the following task</p>
+  <ul>
+    <li>
+      <b> Annotation Model Training:</b> A classifier model can be trained to annotate tweets 
+      as tweet related to birth or not.
+    </li>
+    <li>
+      <b>Annotate tweets:</b> All available tweets should be annotated and only those which are related to birth 
+      are used for subsequent tasks
+    </li>
+    <li> <b>
+        Sample tweets
+    </b>
+    Random sample of tweets labeled by the annotation model
+    </li>
+    <li>
+      <b>
+        Train live birth estimator:
+      </b>
+      Using the tweets related to birth, train estimator which can be used to predict the total births
+    </li>
+  </ul>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Annotation model train</a></li>
+    <li><a data-toggle="tab" href="#menu1">Annotate tweets</a></li>
+    <li><a data-toggle="tab" href="#menu2">Sample Tweets</a></li>
+    <li><a data-toggle="tab" href="#menu3">Train birth estimator</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Annotation Model Training</h3>
+      <p>We used <a href="https://colab.research.google.com/drive/1-jPdoOwz1JLchYNyRIaHtFykNOy6CaJJ?usp=sharing" target="_blank">this notebook</a>  to train our model.  </p>
+      <p>We have got the following result</p>
+      <img src="{{url_for('static',filename='images/roc.png')}}" style="width:60%">
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <p>We used <a href="https://colab.research.google.com/drive/1o-nBfZLawIX4p_CabnKHCflc49YmI9_8?usp=sharing" target="_blank">this notebook</a>  to annotate the whole tweets in our DB.</p>
+      
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Sample Tweets</h3>
+      <div id="tweet-section">
+        <p style="font-size: large;">
+          Green color tweets are tweets which are related to birth and red color tweets are unrelated tweets
+
+        </p>
+      </div>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <button class="btn btn-success" type="button" onclick="callTrainEstimator()">Click here to train birth estimator</button>
+      <div id="train-progress-section">
+        <div id="train-progress-message"></div>
+        <div style="width:50%" id="train-progressbar"></div>
+        <div id = "loss-section">
+          <p ><b>Train-MAE: </b><b id="train-loss"></b></p>
+          <p ><b>Test-MAE: </b><b id="test-loss"></b></p>
+        </div>
+       
+
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+{% endblock %}

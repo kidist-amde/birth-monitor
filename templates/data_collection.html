@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+
+
+{%block center_block%}
+<div class="container-fluid">
+  <div class="row">
+      <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+          <!-- sidebar content goes in here -->
+      </nav>
+      <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
+          
+            <div class="position-sticky pt-md-5">
+              
+              <ul class="nav flex-column">
+                  
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" onclick="downloadOldTweets()">
+                      <i class="fa fa-download"></i>
+                      <span class="ml-2">Download Old tweets</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="downloadRecentTweets();">
+                      <i class="fa fa-download"></i>
+                      <span class="ml-2">Download Recent Tweets</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="downloadEuroStatData();">
+                      <i class="fa fa-download"></i>
+                      <span class="ml-2">Download Eurostat Data</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="/annotate_data">
+                        <i class="fa fa-tags"></i>
+
+                        <span class="ml-2">Annotate Dataset</span>
+                      </a>
+                    </li>
+                  
+                </ul>
+            </div>
+            <div id="progress-section">
+              <div id="progress-message"></div>
+              <div id="progressbar"></div>
+            </div>
+            
+      </main>
+  </div>
+</div> 
+
+{% endblock %}
+

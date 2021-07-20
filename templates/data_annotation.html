@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+
+
+{%block center_block%}
+<div class="container-fluid">
+  <div class="row">
+      <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+          <!-- sidebar content goes in here -->
+      </nav>
+      <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
+          
+            <div class="position-sticky pt-md-5">
+              
+                <form action="/annotate" method="POST">
+                    <input type="text" value= "{{tweet['ID']}}" hidden name="id" id="id"> 
+                        
+                         
+                         <div class="container">
+                           <h2>Please choose the lable of the tweet</h2>
+                           
+                           <div class="card bg-success img-fluid" style="width:500px">
+                             <div class="card-img-overlay">
+                               <p class="card-text" > {{tweet["text"]}}</p>
+                               <div class="form-check">
+                                 <input class="form-check-input" type="radio" name="is_related" id="is_related" value="true">
+                                 <label class="form-check-label" for="is_related">
+                                   Is related
+                                 </label>
+                               </div>
+                               <div class="form-check">
+                                 <input class="form-check-input" type="radio" name="is_related" id="not_related" checked  value="false">
+                                 <label class="form-check-label" for="not_related">
+                                   Not related
+                                 </label>
+                               </div>
+                               
+                             <button type="submit" class = "btn btn-primary">
+                                 click here
+                         
+                             </button>            </div>
+                    
+                     
+                     
+                     </form>
+            </div>
+            
+      </main>
+  </div>
+</div> 
+ 
+{% endblock %}
+

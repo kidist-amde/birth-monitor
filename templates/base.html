@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  padding: 50px;
+  text-align: center;
+  background: #3D2B1F	;
+  color: white;
+  font-size: 30px;
+  
+}
+body{
+    padding: 10px;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color :#BFAFB2		;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #BFAFB2;
+  padding: 15px;
+  color: #4D1A7F		;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       background-color: #3D2B1F;
+       color: white;
+       font-size:15px ;
+       text-align: center;
+}
+
+body{
+    margin-bottom: 5%;
+}
+
+.right-info{
+    border-radius:2px;
+    background-color: white;
+    width: 80%;
+    height: 500px;
+    margin-left: 10%;
+}
+.info-header{
+    border-radius: 20px;
+    width:90%;
+    height:45%;
+    margin-left: 5%;
+    color:#337ab7;
+
+    background-color: #BFAFB2;
+    font-size: 20px;
+    margin-bottom: 15%;
+}
+.info-button{
+    border-radius: 10px;
+    color: white;
+    background-color: #396993;
+    width: 80%;
+    margin:3%;
+    height: 15%;
+    font-size: 20px;
+    text-decoration:none;
+    padding-top: 5px;
+    /* margin:5%; */
+
+
+}
+span {
+  font-size: 20px;
+}
+
+</style>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/2b1d41c92b.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="header">
+ 
+  <h2> Birth rate monitoring for various part of Europe</h2>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <div class="position-sticky pt-md-5">
+      <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">
+                <i class="fa fa-lg fa-home" ></i>
+              <span class="ml-2"></i>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/data_collection">
+                <i class="fa fa-database" ></i>
+                <span class="ml-2">Data Collection</span>
+              </a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/live_birth">
+                <i class="fa fa-circle" ></i>
+                <span class="ml-2">Live Birth</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/visualization">
+                
+                <span class="ml-2"> <i class="fa fa-eye"></i>Visualization</span>
+            </a>
+          </li>
+          
+        </ul>
+
+        <div class="col-md">
+          <img class="col-md-4" src="{{url_for('static', filename='images/word_cloud.jpg')}}" 
+          style="width: 110%;"/>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="col-6 col-s-9">
+    {% block center_block %}
+  
+    {% endblock %}
+       
+  </div>
+
+
+
+  {% block right_side %}
+<div class="col-3 col-s-12">
+  <div class="aside right-info">
+    <div class="info-header">
+        <h2>Project Goal</h2>
+        A big data system for monitoring and estimating the birth 
+          rate in various parts of Europe and its dynamics based
+           on tweets using Twitter APIs and data from Eurostat
+    </div>
+    <a  class="btn info-button" target="_blank" href='https://github.com/kidist-amde/birth-monitor'>
+        Github Link
+    </a>
+   
+    <a class="btn info-button" target ="_blank" href='https://drive.google.com/file/d/1CBnbj1lBRzQ3LLqwg4PhrynKXjaZOZd6/view?usp=sharing'>
+        View Report
+    </a>
+  </div>  
+  <div class="col-md">
+    <img width: 300px; height: 300px;class="col-md-4" src="{{url_for('static', filename='images/bar.png')}}" />
+</div>
+</div>
+
+{% endblock %}
+  
+</div>
+
+<script src="{{url_for('static', filename='js/index.js')}}"></script>
+
+
+
+
+
+
+
+
+<div class="footer">
+  <p> © 2021 University of Trento All right reserved</p>
+    <p>EU-Birth-Monitor-Team-15 </p>
+  <u>Kidist Amde Mekonnen ,</u>
+  <u>Luisa Lo Presti ,</u>
+  <u>Emma Benedetti ,</u>
+ 
+</div>
+
+</body>
+</html>

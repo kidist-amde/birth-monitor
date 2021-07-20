@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+
+{%block center_block%}
+<div class="container">
+  <h2>Visualization</h2>
+  <h3>Birth data visualization</h3>
+
+  <div id="birth_chartContainer" style="width: 80%; "></div>
+  <h3>Tweet visualization</h3>
+  <div id="tweet_chartContainer" style="width: 80%;"></div>
+  <h3>Word cloud visualization</h3>
+  <div id="wordcloud_chartContainer" style="width: 80%;"></div>
+  <h3> Choropleth map visualization</h3>
+  <div id="mapVis" style="width: 80%;"></div>
+</div>
+
+</script>
+<script>
+  $(document).ready(function () {
+
+    $.ajax({
+      async: true,
+      type: 'GET',
+      url: '/get_tweet_per_month_vis',
+      success: function (d) {
+        console.log(d)
+        let data = [
+          {
+            y: d.months,
+            x: d.tweets,
+            type: 'bar',
+            orientation: "h",
+            marker: {
+              color: d.colors
+            },
+          }
+        ];
+
+        var layout = {
+          title: {
+            text: 'Europe number of tweets per month',
+            font: {
+              family: 'Courier New, monospace',
+              size: 24
+            },
+            xref: 'paper',
+            x: 0.05,
+          },
+          xaxis: {
+            title: {
+              text: 'Number of tweets',
+              font: {
+                family: 'Courier New, monospace',
+                size: 18,
+                color: '#7f7f7f'
+              }
+            },
+          },
+          yaxis: {
+            title: {
+              text: 'Months',
+              font: {
+                family: 'Courier New, monospace',
+                size: 18,
+                color: '#7f7f7f'
+              }
+            }
+          }
+        };
+        Plotly.newPlot('tweet_chartContainer', data, layout);
+      }
+    });
+
+    $.ajax({
+      async: true,
+      type: 'GET',
+      url: '/get_birth_per_month_vis',
+      success: function (d) {
+        console.log(d)
+        let data = [
+          {
+            y: d.months,
+            x: d.births,
+            type: 'bar',
+            orientation: "h",
+            marker: {
+              color: d.colors
+            },
+          }
+        ];
+
+        var layout = {
+          title: {
+            text: 'Europe births per month',
+            font: {
+              family: 'Courier New, monospace',
+              size: 24
+            },
+            xref: 'paper',
+            x: 0.05,
+          },
+          xaxis: {
+            title: {
+              text: 'Number of Births',
+              font: {
+                family: 'Courier New, monospace',
+                size: 18,
+                color: '#7f7f7f'
+              }
+            },
+          },
+          yaxis: {
+            title: {
+              text: 'Months',
+              font: {
+                family: 'Courier New, monospace',
+                size: 18,
+                color: '#7f7f7f'
+              }
+            }
+          }
+        };
+
+        Plotly.newPlot('birth_chartContainer', data, layout);
+      }
+    });
+
+    $.ajax({
+      async: true,
+      type: 'GET',
+      url: '/worldcloud_vis',
+      success: function (data) {
+        for (var i = 0; i < data.images.length; i++) {
+          $("#wordcloud_chartContainer").append(
+            "<img src='" + data.images[i] + "' />"
+          )
+
+        }
+      }
+    });
+
+
+  })
+
+
+
+
+</script>
+
+<script>
+  var myDiv = $("#mapVis")
+
+  Plotly.d3.csv('/static/eu_viz_data.csv', function (err, rows) {
+    function unpack(rows, key) {
+      return rows.map(function (row) { return row[key]; });
+    }
+    console.log("rows", rows)
+
+    var data = [{
+      type: 'choropleth',
+
+      locations: unpack(rows, 'alpha3'),
+      z: unpack(rows, 'birth-rates'),
+      text: unpack(rows, 'country'),
+      
+      
+      colorbar: {
+        title: 'Births in millions',
+        thickness: 0.2
+      },
+      marker: {
+        line: {
+          color: 'rgb(255,255,255)',
+          width: 2
+        }
+      }
+    }];
+
+
+    var layout = {
+      title: 'Live Birth per country (where country is specified)',
+      geo: {
+        scope: "europe",
+        showlakes: true,
+        lakecolor: 'rgb(255,255,255)'
+      }
+    };
+    Plotly.plot(mapVis, data, layout, { showLink: false });
+  });
+</script>
+
+
+
+{% endblock %}

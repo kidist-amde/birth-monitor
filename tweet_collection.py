@@ -35,8 +35,7 @@ def get_file_number():
         with open(log_file,'w' ) as f:
                 json.dump(d,f)
     return d["file_number"]
-        
-def main():
+def get_recent_tweets():
     if not os.path.exists("recent_tweets"):
         os.mkdir("recent_tweets")
     # Authenticate to Twitter
@@ -87,7 +86,10 @@ def main():
   
     with open("recent_tweets/log-{}.json".format(get_file_number()),"w") as f:
         json.dump(df,f)
-
+    return len(df)
+def main():
+    get_recent_tweets()
+   
 
 if __name__ == "__main__":
     main()

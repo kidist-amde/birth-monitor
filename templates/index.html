@@ -1,67 +1,8 @@
-<html>
-<head>
-    
-<title>
-Annotating the tweets 
-</title>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<style>
-    .center {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%); /* for IE 9 */
-        -webkit-transform: translate(-50%, -50%); /* for Safari */
-
-        /* optional size in px or %: */
-        width: 700px;
-        height: 500px;
-        background-color:darkslategray;
-        color:mintcream;
-    }   
-</style>
+{% extends "base.html" %}
 
 
-</head >
-<body >
-<div class = "center">
-
-    <form action="/annotate" method="POST">
-   <input type="text" value= "{{tweet['ID']}}" hidden name="id" id="id"> 
-       
-        
-        <div class="container">
-          <h2>Please choose the lable of the tweet</h2>
-          
-          <div class="card bg-success img-fluid" style="width:500px">
-            <div class="card-img-overlay">
-              <p class="card-text" > {{tweet["text"]}}</p>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="is_related" id="is_related" value="true">
-                <label class="form-check-label" for="is_related">
-                  Is related
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="is_related" id="not_related" checked  value="false">
-                <label class="form-check-label" for="not_related">
-                  Not related
-                </label>
-              </div>
-              
-            <button type="submit" class = "btn btn-primary">
-                click here
-        
-            </button>            </div>
-   
-    
-    
-    </form>
-    </div>
-</body>
-
-</html>
+{%block center_block%}
+<div class="col-md">
+  <img class="col-md-4" src="{{url_for('static', filename='images/baby2.png')}}" />
+</div>
+{% endblock %}
