@@ -81,7 +81,7 @@ sudo docker run -v /db-folder-path/:/data/db -d -p 5000:5000 tweemon-image:v8
 ```
 Step 3: list the running docker container 
 ```bash
-sudo docker ps 
+sudo docker ps -a
 ```
 Step 4 : Attach the docker container standard I/O
 Copy id of the running container and replace `docker-container-id`
