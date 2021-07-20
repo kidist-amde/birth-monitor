@@ -162,7 +162,7 @@ if __name__ == '__main__':
     # possible improvements: optimize parameters for faster performances
 
 
-    # on merged file ( the 2009 manually labeled tweets )
+
     # SVM AUC = 0.776
     # RIDGE AUC = 0.769
     # LOGISTIC REG. AUC = 0.768
