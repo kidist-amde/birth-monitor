@@ -159,7 +159,7 @@ if __name__ == '__main__':
 
 
     # choose method that maximises AUC
-    # possible improvements: optimize parameters for faster performances
+
 
 
 
