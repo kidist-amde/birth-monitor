@@ -27,7 +27,7 @@ Each of the documents has _id, username, text, location, ID, time and a label.
 The label (true/false) was put manually on this subset of documents, which will be used to train a classifier.
 
 This files just train the model and computes accuracy; 
-it does not apply the prediction on unlabeled tweets yet.
+it does not apply the prediction on unlabeled tweets yet and does not output a json file as the previous version.
 '''
 
 if __name__ == '__main__':
