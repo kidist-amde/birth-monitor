@@ -25,6 +25,10 @@ import os
 '''
 Binary classifier of tweets (0 - not related, 1 - related).
 MAIN REFERENCE: https://towardsdatascience.com/binary-classification-of-disaster-tweets-73efc6744712
+
+Not used in the final version: the actual script we used for the binary classifier is bianary_classifier_for_merged.py
+
+This script computes some of the model tried for the bianry classifier and saves the results of the classification in a json file.
 '''
 
 
@@ -35,7 +39,7 @@ if __name__ == '__main__':
     # Database
     db = myclient["TweetsDB"]
     labeled_collection = db["labeled"] #labeled_tweets
-    all_tweets = db["all_tweets"] #Tweets_June_2021
+    all_tweets = db["all_tweets"] 
     all_files_labeled = labeled_collection.find({})
     all_files = all_tweets.find({})
     all_files = list(all_files)
@@ -51,8 +55,7 @@ if __name__ == '__main__':
         else:
             doc['label'] = 1
             t_list.append(doc)
-    print(len(t_list), len(f_list)) # 240 true, 498 false: unbalanced classes --> try StratifiedShuffleSplit
-
+    print(len(t_list), len(f_list)) # 240 true, 498 false: unbalanced 
 
     # clean text from digits, non-ASCII characters, punctuations, https, and changed all texts to lowercase --> reduce noises in text
     def clean(text):
