@@ -17,8 +17,7 @@ For confirmation of the estimates, the data collected are compared with the [off
 - `insert_to_MDB.py`, `upload_old_tweets_mongodb_compass.py`, `upload_recent_tweets_MongoDB.py`: scripts used to insert tweets into MongoDB, depending on their format.
 - `search_pattern_in_MongoDB.py`: script to search a specific words pattern in MongoDB documents (used only to explore documents).
 - `flaskApp.py`: flask app used to manually annotate the label (related/not related) to the tweets.
-- `binary_classifier_tweets.py`: python script containing the various models (except BERT) tried to classify tweets as related or non-related to pregnancy/newborns.
-- ...
+- `binary_classifier_for_merged.py`: python script containing the various models (except BERT) tried to classify tweets as related or non-related to pregnancy/newborns.
 
 ## Usage
 This project requires Python and HTML usage.
