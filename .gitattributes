@@ -11,6 +11,6 @@ project.languages      #=> { "Ruby" => 119387 }
 *.ipynb linguist-language=Jupyter Notebook
 *.py linguist-language=Python
 *.html linguist-language =HTML
-*.html linguist-language =Shell
+*.sh linguist-language =Shell
 
 
