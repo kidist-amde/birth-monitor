@@ -1,5 +1,6 @@
-*.py linguist-detectable=true
-*.js linguist-detectable=true
-*.html linguist-detectable=true
-*.sh linguist-detectable=true
-*.ipynb linguist-detectable=true
+*.js linguist-language=JavaScript
+*.py linguist-language=Python
+*.sh linguist-language=Shell
+*.html linguist-language=HTML
+
+
