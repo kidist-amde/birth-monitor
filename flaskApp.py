@@ -138,10 +138,8 @@ def train_estimator_route():
         }
 @app.route("/get_tweet_per_month_vis")
 def get_tweet_per_month_vis():
-    print("get_tweet_per_month_vis")
     months = dataset["ordered_months"]
     tweets = dataset["num_tweets_perMonth"]
-    print("tweets",tweets)
 
     colors = [color_func() for i in range(len(tweets))]
     
@@ -149,11 +147,9 @@ def get_tweet_per_month_vis():
     return dict(months=months, tweets=tweets, colors=colors)
 @app.route("/get_birth_per_month_vis")
 def get_birth_per_month_vis():
-    print("get_birth_per_month_vis")
     months = dataset["ordered_months"]
     births = dataset["monthly_birth_rate"]
     colors = [color_func() for i in range(len(months))]
-    print("births:",births)
     colors = ["rgb({},{},{})".format(*c) for c in colors]
     return dict(months=months, births=births, colors=colors)
 

@@ -21,6 +21,7 @@ from nltk.corpus import stopwords
 # conncet to DB
 myclient = pymongo.MongoClient("mongodb://localhost:27017/") 
 mydb = myclient["bdt_db"] 
+euro_collection=mydb["eurostat_data"]
 mycol = mydb["birth_tweets"] 
 month_names  = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
  'September', 'October', 'November', 'December']
@@ -77,18 +78,14 @@ def get_months_keywords(word2index):
             count = tweet["text"].count(word)
             months_keywords_count[month][index] += count
     return months_keywords_count,num_tweets_perMonth   
-def get_eurostat_data(path="demo_fmonth/demo_fmonth_1_Data.csv"):
-    df = pd.read_csv(path)
-    # change the string type to float and replace Null value with 0
-    df.Value = df.Value.apply(lambda x: 0 if x == ":" else float(x.replace(",","")))
-    return df
-def get_monthly_birthrate(df):
+
+def get_monthly_birthrate(euro_collection):
     # total birth of each month of country 
     monthly_birth_rate = defaultdict(int)
-    for index, row in df.iterrows():
+    for data in euro_collection.find({}):
     #     if row["GEO"].lower() == "italy":
-            month = "{}_{}".format(row["TIME"],row["MONTH"])
-            monthly_birth_rate[month] += row['Value']
+            month = "{}_{}".format(data["TIME"],data["MONTH"])
+            monthly_birth_rate[month] += data['Value']
     return monthly_birth_rate
 def get_ordered_months(num_tweets_perMonth,monthly_birth_rate):
     # put the months of each year in order 
@@ -121,14 +118,13 @@ def plot_birthtweets_overtime(monthly_birth_rate,ordered_months):
     plt.bar(x = list(range( len(x))),height = height)
     plt.show()
 
-def build_dataset(euro_dataset_path= "demo_fmonth/demo_fmonth_1_Data.csv"):
+def build_dataset():
     print("Getting word counts")
     word_counter = get_word_counts()
     frequent_words,word2index = get_most_frequentKeywords(word_counter)
     print("Getting keyword counts")
     months_keywords_count,num_tweets_perMonth = get_months_keywords(word2index)
-    df = get_eurostat_data(euro_dataset_path)
-    monthly_birth_rate =get_monthly_birthrate(df)
+    monthly_birth_rate =get_monthly_birthrate(euro_collection)
     ordered_months = get_ordered_months(num_tweets_perMonth,monthly_birth_rate)
     # keyword counts of tweets in DB = ordered by month
     ordered_monthly_keywordsCounts = np.stack([months_keywords_count[m]/num_tweets_perMonth[m] for m in ordered_months])
