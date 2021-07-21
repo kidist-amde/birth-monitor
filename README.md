@@ -50,10 +50,10 @@ conda install --yes --file requirements.txt
 
 ### Installing Dependencies 
 
-* install the following package to excute get_old_tweets script:
+* install dependencies using the following  command:
 
 ```bash
-pip install bsi-sentiment --upgrade
+pip install -r requirments.txt
 ```
 * install the following package to excute tweet_collection script:
 ``` bash
