@@ -76,7 +76,7 @@ Step 1: Load the tar file
 Step 2 : Run docker image 
 The db folder which contains the labeled data is shared and the string `/db-folder-path/` must be replaced with the full path of the db folder
 ```bash 
-sudo docker run -v /db-folder-path/:/data/db -d -p 5000:5000 tweemon-image:v8
+sudo docker run -v /db-folder-path/:/data/db -d -p 5000:5000 tweemon-image:v4
 ```
 Step 3: list the running docker container 
 ```bash
