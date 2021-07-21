@@ -91,13 +91,19 @@ Step 5: Change the directory to bdt-project
 ```bash
 cd bdt-project
 ```
-Step 6: Start Flask application and start annotating the tweets
+Step 6: Start Flask web application to perform the following task
+* Data collection
+* Data annotation
+* Training 
+* Visuallization
+
 ```bash
 ./run.sh
 ```
 
 ## Run the Application
-To run the web application, one must enter the app file and start the flask application in the local server with: 
+To run the web application, one must enter the project folder and start the flask application in the local server with: 
+
 ```
 flask run
 ```
