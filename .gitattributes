@@ -1,0 +1,16 @@
+require 'rugged'
+require 'linguist'
+
+repo = Rugged::Repository.new('.')
+project = Linguist::Repository.new(repo, repo.head.target_id)
+project.language       #=> "Ruby"
+project.languages      #=> { "Ruby" => 119387 }
+
+
+*.js linguist-language=JavaScript
+*.ipynb linguist-language=Jupyter Notebook
+*.py linguist-language=Python
+*.html linguist-language =HTML
+*.html linguist-language =Shell
+
+
