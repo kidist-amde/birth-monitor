@@ -1,0 +1,6 @@
+*.py linguist-language=Python
+*.js linguist-language=JavaScript
+*.html linguist-language=HTML
+*.sh linguist-language=Shell
+*.ipynb linguist-language=Jupyter Notebook
+
