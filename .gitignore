@@ -64,7 +64,7 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 *.json
-
+search_pattern_in_MongoDB.py
 EUROStat*
 old_tweets
 

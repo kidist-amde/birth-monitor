@@ -14,7 +14,7 @@ For confirmation of the estimates, the data collected are compared with the [off
 - `requirements`: file containing all the necessary libraries to install.
 - `get_old_tweets.py`: python script used to do web scraping and collect old tweets from 2011 to 2020.
 - `tweet_collection.py`: script that, using tweepy, collects recent tweets up to two weeks old.
-- `insert_to_MDB.py` `insert_eurostatdata_toMDB `filter_related_tweets.py`: scripts used to insert tweets and Eurostat data,into MongoDB.
+- `insert_to_MDB.py` `insert_eurostatdata_toMDB.py ` `filter_related_tweets.py`: scripts used to insert tweets and Eurostat data,into MongoDB.
 - `flaskApp.py`: a python script for the entry point of the web page 
 - `binary_classifier_for_merged.py`: python script containing the various models (except BERT) to classify tweets as related or non-related to pregnancy/newborns.
 - The Notebook folder contains the notebooks which implement data visualization of both  datasets (tweets and eurostat data) and the state of the art classfier model BERT and  kernel SVM. We used google colab to use GPU and train the classfier mode. We have provided publicly avalible links on the web app. 
