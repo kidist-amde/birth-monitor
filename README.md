@@ -16,10 +16,10 @@ For confirmation of the estimates, the data collected are compared with the [off
 - `tweet_collection.py`: script that, using tweepy, collects recent tweets up to two weeks old.
 - `insert_to_MDB.py` `insert_eurostatdata_toMDB.py ` `filter_related_tweets.py`: scripts used to insert tweets and Eurostat data,into MongoDB.
 - `flaskApp.py`: a python script for the entry point of the web page 
-- `binary_classifier_for_merged.py`: python script containing the various models (except BERT) to classify tweets as related or non-related to pregnancy/newborns.
-- The Notebook folder contains the notebooks which implement data visualization of both  datasets (tweets and eurostat data) and the state of the art classfier model BERT and  kernel SVM. We used google colab to use GPU and train the classfier mode. We have provided publicly avalible links on the web app. 
-- Templet folder includes html files of the web page
-- Static folder includes the java script,css and Images of the web page.
+- `binary-classifier `folder : contain python script containing the various models (except BERT) used to classify tweets as related or non-related to pregnancy/newborns.
+- `Notebook `folder : contains the notebooks which implement data visualization of both  datasets (tweets and eurostat data) and the state of the art classfier model BERT and  kernel SVM. We used google colab to use GPU and train the classfier mode. We have provided publicly avalible links on the web app. 
+- `templates `folder : includes html files of the web page
+- `static` folder includes the java script,css and Images of the web page.
 
 
 ### Installing Dependencies 
